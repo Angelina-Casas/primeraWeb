@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel del Administrador</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Admin</h2>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="mostrarSeccion('usuarios')">Usuarios</a></li>
+          <li><a href="#" onclick="mostrarSeccion('aulas')">Aulas</a></li>
+          <li><a href="#" onclick="mostrarSeccion('cursos')">Cursos</a></li>
+          <li><a href="#">Cerrar sesión</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+        <img src="Img/logoMiColePequeno.png" alt="Logo" class="logo-superior-derecha">
+      <h1>Bienvenido, Administrador</h1>
+
+      <section id="usuarios" class="seccion visible">
+        <h2>Gestión de Usuarios</h2>
+        <p>Aquí puedes agregar, editar o eliminar usuarios.</p>
+        <!-- Agrega tu tabla o formulario aquí -->
+      </section>
+
+      <section id="aulas" class="seccion">
+        <h2>Gestión de Aulas</h2>
+        <p>Aquí puedes gestionar las aulas registradas.</p>
+      </section>
+
+      <section id="cursos" class="seccion">
+        <h2>Gestión de Cursos</h2>
+        <p>Aquí puedes asignar docentes, aulas y cursos.</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function mostrarSeccion(id) {
+      document.querySelectorAll('.seccion').forEach(sec => sec.classList.remove('visible'));
+      document.getElementById(id).classList.add('visible');
+    }
+  </script>
+</body>
+</html>
