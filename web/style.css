@@ -1,0 +1,260 @@
+/* ==== PERFIL ==== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+}
+
+.panel {
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.perfil {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.foto {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+
+.info-basica, .info-adicional {
+  width: 40%;
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+  resize: none;
+  font-family: monospace;
+  background: #f0f0f0;
+  border: none;
+  padding: 10px;
+}
+
+/* ==== CURSOS ==== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.panel {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #275771;
+}
+
+.contenedor-cursos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  gap: 15px;
+}
+
+.boton-curso {
+  width: 400px;
+  padding: 15px;
+  font-size: 18px;
+  background-color: #feea9d;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: bold;
+}
+
+.boton-curso:hover {
+  background-color: #fcd865;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ==== admin ==== */
+body {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #27374D;
+  color: #fff;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background-color: #445c77;
+  border-radius: 5px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background-color: #fff;
+}
+
+.main-content h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.seccion {
+  display: none;
+}
+
+.seccion.visible {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: fixed;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  .main-content {
+    margin-top: 200px;
+  }
+}
+
+/* ==== login ==== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.contenedor-login {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.panel-izquierdo {
+  background-color: #d4dfed;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-grande {
+  max-width: 70%;
+  height: auto;
+}
+
+.panel-derecho {
+  background-color: white;
+  width: 50%;
+  position: relative;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-pequeno {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 100px;
+}
+
+.icono-usuario {
+  width: 80px;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 140px;
+  font-weight: bold;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.formulario label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.formulario input {
+  padding: 10px;
+  background-color: #d2ebff;
+  border: none;
+  border-radius: 4px;
+}
+
+.formulario button {
+  margin-top: 15px;
+  background-color: #275775;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  background-color: #1d415c;
+}
