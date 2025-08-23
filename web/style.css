@@ -96,20 +96,25 @@ h2 {
 body {
   display: flex;
   min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
   background-color: #f4f4f4;
 }
+
 .logo-superior-derecha {
   position: absolute;
   top: 20px;
   right: 30px;
   width: 100px;
 }
+
 .logo-superior-izquierda {
-    position: absolute;
-    top: 40px;
-    right: 900px;
-    width: 100px;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  width: 100px;
 }
+
 .container {
   display: flex;
   width: 100%;
@@ -120,6 +125,7 @@ body {
   background-color: #27374D;
   color: #fff;
   padding: 20px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .sidebar h2 {
@@ -129,6 +135,7 @@ body {
 
 .sidebar ul {
   list-style: none;
+  padding: 0;
 }
 
 .sidebar ul li {
@@ -140,18 +147,19 @@ body {
   text-decoration: none;
   padding: 10px;
   display: block;
+  border-radius: 5px;
   transition: background-color 0.3s;
 }
 
 .sidebar ul li a:hover {
   background-color: #445c77;
-  border-radius: 5px;
 }
 
 .main-content {
   flex: 1;
   padding: 30px;
   background-color: #fff;
+  overflow-x: auto;
 }
 
 .main-content h1 {
@@ -159,6 +167,7 @@ body {
   color: #333;
 }
 
+/* Secciones ocultas */
 .seccion {
   display: none;
 }
@@ -167,18 +176,70 @@ body {
   display: block;
 }
 
+/* ==== TABLA DE USUARIOS ==== */
+.table-usuarios {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 14px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table-usuarios thead {
+  background-color: #27374D;
+  color: #fff;
+}
+
+.table-usuarios th,
+.table-usuarios td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.table-usuarios tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table-usuarios tbody tr:hover {
+  background-color: #e6f0ff;
+}
+
+/* ==== RESPONSIVE ==== */
 @media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
   .sidebar {
     width: 100%;
-    position: fixed;
-    height: auto;
-    top: 0;
-    left: 0;
-    z-index: 10;
+    position: relative;
+    text-align: center;
   }
 
   .main-content {
-    margin-top: 200px;
+    margin-top: 10px;
+  }
+
+  /* Tabla en scroll horizontal */
+  .table-usuarios {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sidebar ul li {
+    margin: 10px 0;
+  }
+
+  .table-usuarios th,
+  .table-usuarios td {
+    padding: 8px;
+    font-size: 12px;
   }
 }
 

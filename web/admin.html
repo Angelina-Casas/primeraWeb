@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="header">
+      <div class="logo">Mi App</div>
+      <label for="menu-toggle" class="menu-icon">☰</label>
+  </header>
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
   <div class="container">
     <aside class="sidebar">
       <h2>Admin</h2>
@@ -15,7 +20,7 @@
           <li><a href="#" onclick="mostrarSeccion('usuarios')">Usuarios</a></li>
           <li><a href="#" onclick="mostrarSeccion('aulas')">Aulas</a></li>
           <li><a href="#" onclick="mostrarSeccion('cursos')">Cursos</a></li>
-          <li><a href="#">Cerrar sesión</a></li>
+          <li><a href="logout.jsp">Cerrar sesión</a></li>
         </ul>
       </nav>
     </aside>
@@ -27,8 +32,32 @@
 
       <section id="usuarios" class="seccion visible">
         <h2>Gestión de Usuarios</h2>
-        <p>Aquí puedes agregar, editar o eliminar usuarios.</p>
-        <!-- Agrega tu tabla o formulario aquí -->
+        <form id="formUsuario">
+          <input type="text" name="nombre" placeholder="Nombre" required>
+          <input type="email" name="email" placeholder="Correo" required>
+          <input type="password" name="clave" placeholder="Contraseña" required>
+          <select name="rol" required>
+            <option value="admin">Administrador</option>
+            <option value="profesor">Profesor</option>
+            <option value="alumno">Alumno</option>
+          </select>
+          <button type="submit">Crear Usuario</button>
+        </form>
+
+        <h3>Lista de Usuarios</h3>
+        <table id="tablaUsuarios" border="1">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Rol</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
       </section>
 
       <section id="aulas" class="seccion">
